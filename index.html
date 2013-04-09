@@ -1,66 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Process-oriented Programming by Alhamed</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Process-oriented Programming : Process-oriented Programming" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Process-oriented Programming</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Process-oriented Programming</h1>
-        <p>Process-oriented Programming</p>
 
-        <p class="view"><a href="https://github.com/Alhamed/pop">View the Project on GitHub <small>Alhamed/pop</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Alhamed/pop">View on GitHub</a>
 
+          <h1 id="project_title">Process-oriented Programming</h1>
+          <h2 id="project_tagline">Process-oriented Programming</h2>
 
-        <ul>
-          <li><a href="https://github.com/Alhamed/pop/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Alhamed/pop/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Alhamed/pop">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>Welcome to GitHub Pages.</h3>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Alhamed/pop/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Alhamed/pop/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Introduction</h3>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>Since the nineties when Object Oriented Programming (OOP) is introduced to solve software development issues, we keep using the same concepts over and over. In the same time, our needs are in a changing mode that is influenced by the changed in several factors like computing infrastructure, and human resources. Nowadays, cloud computing is taking its way to dominate the IT infrastructure, and the concept of remote employee is spreading all over industries. Thus, enhancing the concepts of OOP and add others to keep up with the changes around us is mandatory. Therefore, Process Oriented Programming (POP) is a different way to develop software that has capabilities to keep up with the changes that we experience.</p>
+
+<h3>The Specifications of Process Oriented Programming (POP)</h3>
+
+<p>In order to develop a POP software there are two fundamental components: engine and application. An engine should be off-the-shelf product that is developed in purpose to maintain certain type of application. For example, if you are planning to develop a web application that is cloud-aware you may need to consider an engine that is designed for cloud infrastructure. An engine works as a smart virtual environment for your POP system. Thus, each engine should provide the minimum capabilities as the following:</p>
+
+<ul>
+<li>Interpret and execute processes: that means an engine is in charge to coordinate and execute an application's processes, stages and tasks.</li>
+<li>Maintain the data and data-flow. An engine will deliver the required data to a task inside a process in order to make the task able to perform its job. It also takes what the task produce and pass it to the next task.</li>
+<li>Provide the required resources of software libraries.</li>
+<li>Provide a communication environment between processes and tasks.</li>
+</ul><p>In the other hand, the application is what need to be developed in order to carry out an entity’s business. each application contains four essential components as the following:</p>
+
+<ul>
+<li>Processes, where the processes of the application are defined. each process composed of stages, and each stage is composed of atom tasks.</li>
+<li>Data, where the data that are required by the application are defined. Each data model contains inputs that are used by the tasks.</li>
+<li>Tasks, where the atom tasks are defined and implemented. Each task is composed of imperative computation statements. For example, assign X to Y (Y=X).</li>
+<li>Controls, where the process controls such as conditions are defineds. Controls similar to tasks except that expected product of a condition is True or False.</li>
+</ul><p>An application will be engine-dependent so POP application needs to be built based on the engine specifications, unless that we come with a standard to smooth the movement from an engine to another.</p>
+
+<h3>Application Processes</h3>
+
+<p>Processes are vital in POP paradigm. In fact, they are the main place that we need to start with and break the system down to small atom tasks. In the end of the day each software we create will do certain steps to produce what we are looking for. For example, a calculator application will do the following in order to calculate this expression: 1+2.</p>
+
+<pre><code>step#1: Receive the the expression as an input.
+
+step#2: interpret and validate the input.
+
+step#3: use the system computer resources to loop over the expression and calculate it.
+
+step#4: format the output.
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>these steps will be the result in the end of the day if we created the calculator application in Object Oriented Programing (OOP) or in POP. From those steps we’ll create the process and break it down into stages and tasks.
+Process Stages</p>
 
-<h3>Designer Templates</h3>
+<p>The goal of dividing each process into stages is to group the transactional tasks are able to be executed sequentially with no need for input data. In other word, each stage composited of tasks that can be executed without waiting for any input or an event to append in the future. For example, a university course management system that has a process called: Course Registration Process. If the business logic for course registration required approval from the course instructor, then the process will be divided into two stages. First stage will contains the following tasks:</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<ul>
+<li>Receive course information</li>
+<li>Validate input</li>
+<li>Check availability and eligibility</li>
+<li>Send notification to the course’ instructor.</li>
+</ul><p>The second stage of the registration process will contains the following tasks:</p>
 
-<h3>Rather Drive Stick?</h3>
+<ul>
+<li>Receive approval details</li>
+<li>Register the course</li>
+<li>Notify the student.</li>
+</ul><h3>Application Data</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>During the execution of each process, tasks may need data in order to proceed in the execution. The points where the data can be received are the start of each stage. Thus, the first task in each stage might be a receiving task that receives data from a human interface or an API and then continue in the execution of the process.</p>
 
-<h3>Authors and Contributors</h3>
+<p>Each stage data model contains several inputs that are described and specified. For example, in the course registration process, we need at least two data forms: Course Information, and Instructor Approval. Course Information Model might has the following inputs:</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<ul>
+<li>Student-ID: Integer (6 digits)</li>
+<li>Course Name: String (100 A-Z chars)</li>
+<li>Section Number: Integer (3 digits)</li>
+<li>Quarter Name: String (50 A-Z chars)</li>
+</ul><h3>Application Tasks</h3>
 
-<h3>Support or Contact</h3>
+<p>A task is an atom component in POP paradigm. It contains the implementation of the actual action that need to be performed. Each task is composited of imperative computational statements. In fact, each task is a small function that receives two parameters: IN and OUT, and return True, or False. The return value is an indication for the engine about the status of the task execution whether it succeeded or failed. The IN parameter is a data structure that contains all the required data that is needed by the task. In the same time, the OUT parameter is a data structure that contains all the data that is produced by the tasks. For example, the “Format The Output” task in the calculater application might be as the following:</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<pre><code>Function format_output(in, &amp;out){
+
+result= in[“result”];
+
+if(result == null) {
+
+out[“error_message”]=”result is null”;
+
+return false;
+
+}
+
+out[“formated_result”]=”The result is: ”+result;
+
+return true;
+
+}
+</code></pre>
+
+<h3>Application Controls</h3>
+
+<p>Application controls are similar application tasks except that there is no OUT parameter. The purpose of the controls is to examine the data inside the IN parameter and return True or False. For example, the process of course registration we need a control to decide whether to register a course for the student or not based on the instructor approval. Thus, we need to have a control called: check instructor approval as the following.</p>
+
+<pre><code>Function check_instructure_approval(in){
+
+approval= in[“instructur_approval”];
+
+if(approval == true) return true;
+
+else return false;
+}
+</code></pre>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Alhamed">Alhamed</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Process-oriented Programming maintained by <a href="https://github.com/Alhamed">Alhamed</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
